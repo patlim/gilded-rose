@@ -59,7 +59,8 @@ export default function Home() {
   const [sellIn, setSellIn] = useState<number | undefined>(undefined);
   const [quality, setQuality] = useState<number | undefined>(undefined);
   const [store, setStore] = useState(new GildedRose());
-  function submitForm(event: MouseEventHandler<HTMLButtonElement>) {
+  function submitForm(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     setFormError('');
     if (!name || !sellIn || !quality) {
       setFormError('Please fill in all fields');
