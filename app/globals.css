@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Cylburn';
-  src: url('/fonts/Cylburn-Regular.ttf');
+  font-family: 'Soria';
+  src: url('/fonts/soria.ttf') format('truetype');
 }
 
 * {
@@ -27,7 +27,9 @@ main {
   height: 100vh;
   width: 100vw;
   align-items: center;
+  gap: 12px;
   @media (max-width: 768px) {
+    gap: 24px;
     padding: 24px;
   }
 }
@@ -38,7 +40,7 @@ a {
 }
 
 h1 {
-  font-family: Cylburn;
+  font-family: Soria;
 }
 
 button, .button {
@@ -66,6 +68,15 @@ button, .button {
     color: black;
     &:hover {
       background-color: #ECECEC;
+    }
+  }
+  &.--tertiary {
+    border: 1px solid black;
+    background-color: unset;
+    color: black;
+    padding: 4px 8px;
+    &:hover {
+      background-color: #ECECEC90;
     }
   }
 }

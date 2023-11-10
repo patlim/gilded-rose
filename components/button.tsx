@@ -1,16 +1,20 @@
+import { MouseEventHandler } from "react";
+
 export default function Button ({
+  className,
   type,
   label,
   clickHandler,
 }: {
-  type: "primary" | "secondary",
+  className?: string;
+  type: "primary" | "secondary" | "tertiary",
   label: string,
-  clickHandler: Function,
+  clickHandler: MouseEventHandler<HTMLButtonElement>,
 }) {
   return (
     <button
-      className={`--${type}`}
-      onClick={() => clickHandler}
+      className={`--${type}${className ? ` ${className}` : ''}`}
+      onClick={clickHandler}
     >
       {label}
     </button>
