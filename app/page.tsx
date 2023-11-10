@@ -63,7 +63,7 @@ export default function Home() {
     event.preventDefault();
     setFormError('');
     if (!name || !sellIn || !quality) {
-      setFormError('Please fill in all fields');
+      setFormError('Please fill in all fields correctly');
       return;
     };
     const newItem = new Item(name, sellIn, quality);
